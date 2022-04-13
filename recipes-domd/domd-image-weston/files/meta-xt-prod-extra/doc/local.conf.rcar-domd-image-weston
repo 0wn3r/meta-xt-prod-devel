@@ -280,22 +280,6 @@ VIRTUAL-RUNTIME_init_manager = "systemd"
 # add the static lib to SDK toolchain
 SDKIMAGE_FEATURES_append = " staticdev-pkgs"
 
-# Enable Gfx Pkgs
-MACHINE_FEATURES_append = " gsx"
-MULTI_PROVIDER_WHITELIST += "virtual/libgl virtual/egl virtual/libgles1 virtual/libgles2"
-
-# for Wayland/Weston
-DISTRO_FEATURES_NATIVESDK_append = " wayland"
-DISTRO_FEATURES_append = " pam"
-PREFERRED_PROVIDER_virtual/libgles1 = ""
-PREFERRED_PROVIDER_virtual/libgles2 = "gles-user-module"
-PREFERRED_PROVIDER_virtual/egl = "libegl"
-PREFERRED_PROVIDER_virtual/libgl = ""
-PREFERRED_PROVIDER_virtual/mesa = ""
-PREFERRED_PROVIDER_virtual/libgbm = "libgbm"
-PREFERRED_PROVIDER_libgbm-dev = "libgbm"
-BBMASK = "mesa-gl"
-
 # Enable Multimedia features
 MACHINE_FEATURES_append = " multimedia"
 
@@ -430,9 +414,6 @@ IMAGE_INSTALL_remove = " kernel-module-qos qosif-user-module qosif-tp-user-modul
 
 # For virtualization
 DISTRO_FEATURES_append = " virtualization"
-
-# Configuration for Para-virtual camera
-DISTRO_FEATURES_append = " pvcamera"
 
 DISTRO_FEATURES_remove = " x11 gtk gobject-introspection-data nfc irda zeroconf 3g"
 
