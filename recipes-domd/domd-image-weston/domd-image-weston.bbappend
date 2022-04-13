@@ -60,7 +60,7 @@ python do_configure_append_h3ulcb-4x2g-kf() {
     bb.build.exec_func("configure_versions_kingfisher", d)
 }
 
-XT_BB_IMAGE_TARGET = "core-image-weston"
+XT_BB_IMAGE_TARGET = "core-image-minimal"
 
 # Dom0 is a generic ARMv8 machine w/o machine overrides,
 # but still needs to know which system we are building,
@@ -88,10 +88,10 @@ XT_QUIRK_PATCH_SRC_URI_rcar = "\
     file://0001-0002-meta-renesas-gstreamer-change-git-protocol-at-h.patch;patchdir=meta-rcar \
     file://0001-gstreamer1.0-plugins-good-change-git-protocol-at-htt.patch;patchdir=meta-renesas \
     file://0001-gstreamer1.0-plugins-bad-change-git-protcol-at-https.patch;patchdir=meta-renesas \
+    file://0001-Remove-Utest.patch;patchdir=meta-rcar \
 "
 
 XT_QUIRK_PATCH_SRC_URI_append_h3ulcb-4x2g-kf = "\
-	file://0001-Kingfisher-remove-linux-renesas-uapi.patch;patchdir=meta-rcar \
     file://0001-armtf-Add-missing-ADDITIONAL_ATFW_OPT-in-do_ipl_opt_.patch;patchdir=meta-rcar \
 "
 

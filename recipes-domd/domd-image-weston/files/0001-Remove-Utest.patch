@@ -1,0 +1,54 @@
+From b25edb1e7c006ea1093629dc9ac96f4ad370aaef Mon Sep 17 00:00:00 2001
+From: Eduard Kachur <eduard.kachur@intellias.com>
+Date: Wed, 13 Apr 2022 19:50:45 +0300
+Subject: [PATCH] Remove Utest
+
+---
+ .../packagegroups/packagegroup-bsp.bb         | 20 -------------------
+ 1 file changed, 20 deletions(-)
+
+diff --git a/meta-rcar-gen3-adas/recipes-core/packagegroups/packagegroup-bsp.bb b/meta-rcar-gen3-adas/recipes-core/packagegroups/packagegroup-bsp.bb
+index 26e01972..bec588a7 100644
+--- a/meta-rcar-gen3-adas/recipes-core/packagegroups/packagegroup-bsp.bb
++++ b/meta-rcar-gen3-adas/recipes-core/packagegroups/packagegroup-bsp.bb
+@@ -8,7 +8,6 @@ PACKAGES = " \
+     packagegroup-bsp-core \
+     packagegroup-bsp-custom \
+     packagegroup-bsp-devdbg \
+-    packagegroup-bsp-utest \
+     packagegroup-bsp \
+ "
+ 
+@@ -20,7 +19,6 @@ RDEPENDS_packagegroup-bsp = " \
+     packagegroup-bsp-core \
+     packagegroup-bsp-custom \
+     packagegroup-bsp-devdbg \
+-    packagegroup-bsp-utest \
+ "
+ 
+ RDEPENDS_packagegroup-bsp_append_rcar-gen3-v3x = " \
+@@ -107,21 +105,3 @@ RDEPENDS_packagegroup-bsp-python3 = " \
+     python3-pyyaml \
+     python3-setuptools \
+ "
+-
+-
+-# Utest (IMR, IMP, etc demos) related packages
+-RDEPENDS_packagegroup-bsp-utest = " \
+-    gstreamer1.0-plugins-base \
+-    gstreamer1.0-plugins-base-app \
+-    kernel-module-mmngr \
+-    kernel-module-mmngrbuf \
+-    libdrm \
+-    libgstallocators-1.0 \
+-    libgstapp-1.0 \
+-    libinput \
+-    libyaml \
+-    linux-renesas-uapi \
+-    mmngr-user-module \
+-    netevent \
+-    utest-cam-imr-drm \
+-"
+-- 
+2.34.1
+

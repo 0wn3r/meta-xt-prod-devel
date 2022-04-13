@@ -33,7 +33,7 @@ XT_QUIRK_BB_ADD_LAYER += " \
     meta-xt-prod-domx \
 "
 
-XT_BB_IMAGE_TARGET = "core-image-weston"
+XT_BB_IMAGE_TARGET = "core-image-minimal"
 
 ################################################################################
 # Renesas R-Car
