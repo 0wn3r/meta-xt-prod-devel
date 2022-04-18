@@ -1,7 +1,7 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 FILESEXTRAPATHS_prepend := "${THISDIR}/../../recipes-domx:"
 
-do_configure[depends] += "domd-image-weston:do_domd_install_machine_overrides"
+do_configure[depends] += "domd-image-minimal:do_domd_install_machine_overrides"
 
 python __anonymous () {
     product_name = d.getVar('XT_PRODUCT_NAME', True)
