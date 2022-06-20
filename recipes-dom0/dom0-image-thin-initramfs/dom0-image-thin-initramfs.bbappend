@@ -9,7 +9,7 @@ XT_GUESTS_INSTALL ?= "doma"
 
 python __anonymous () {
     machine = d.getVar('MACHINE', True)
-    not_supported_machines = ["salvator-x-m3", "salvator-xs-h3", "h3ulcb", "m3ulcb", "salvator-x-h3"]
+    not_supported_machines = ["salvator-x-m3", "salvator-xs-h3", "h3ulcb", "salvator-x-h3"]
     if machine in not_supported_machines:
         warning = 'The machine {} is not supported.'.format(machine) 
         bb.warn(warning)
