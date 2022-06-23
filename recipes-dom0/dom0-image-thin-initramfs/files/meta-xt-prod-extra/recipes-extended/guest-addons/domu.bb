@@ -33,6 +33,7 @@ DOMU_CONFIG_h3ulcb-4x2g-xt         = "domu-generic-h3-4x2g.cfg"
 DOMU_CONFIG_h3ulcb-4x2g-ab-xt      = "domu-generic-h3-4x2g.cfg"
 DOMU_CONFIG_h3ulcb-4x2g-kf-xt      = "domu-generic-h3-4x2g.cfg"
 DOMU_CONFIG_salvator-xs-m3-2x4g-xt = "domu-generic-m3-2x4g.cfg"
+DOMU_CONFIG_m3ulcb-2x4g-kf-xt      = "domu-generic-m3-2x4g.cfg"
 
 FILES_${PN} = " \
     ${base_prefix}${XT_DIR_ABS_ROOTFS_DOM_CFG}/domu.cfg \

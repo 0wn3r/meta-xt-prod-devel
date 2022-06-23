@@ -190,6 +190,21 @@ KERNEL_DEVICETREE_h3ulcb-4x2g-kf-xt = " \
     renesas/r8a7795-h3ulcb-4x2g-kf-dom0.dtb \
     renesas/r8a7795-h3ulcb-4x2g-kf-domd.dtb \
 "
+
+
+##############################################################################
+# M3ULCB ES3.0 2x4G KF
+###############################################################################
+SRC_URI_append_m3ulcb-2x4g-kf-xt = " \
+    file://r8a7796-m3ulcb-2x4g-kf-dom0.dts;subdir=git/arch/${ARCH}/boot/dts/renesas \
+    file://r8a7796-m3ulcb-2x4g-kf-domd.dts;subdir=git/arch/${ARCH}/boot/dts/renesas \
+"
+
+KERNEL_DEVICETREE_m3ulcb-2x4g-kf-xt = " \
+    renesas/r8a7796-m3ulcb-2x4g-kf-dom0.dtb \
+    renesas/r8a7796-m3ulcb-2x4g-kf-domd.dtb \
+"
+
 ##############################################################################
 # Salvator-XS M3 ES3.0 2x4GB
 ###############################################################################

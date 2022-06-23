@@ -20,6 +20,7 @@ SRC_URI = "\
     file://domd-h3ulcb-4x2g-ab.cfg \
     file://domd-h3ulcb-4x2g-kf.cfg \
     file://domd-salvator-xs-m3-2x4g.cfg \
+    file://domd-m3ulcb-2x4g-kf.cfg \
     file://guest_domd \
 "
 
@@ -37,6 +38,7 @@ DOMD_CONFIG_h3ulcb-4x2g-xt = "domd-h3ulcb-4x2g.cfg"
 DOMD_CONFIG_h3ulcb-4x2g-ab-xt = "domd-h3ulcb-4x2g-ab.cfg"
 DOMD_CONFIG_h3ulcb-4x2g-kf-xt = "domd-h3ulcb-4x2g-kf.cfg"
 DOMD_CONFIG_salvator-xs-m3-2x4g-xt = "domd-salvator-xs-m3-2x4g.cfg"
+DOMD_CONFIG_m3ulcb-2x4g-kf-xt = "domd-m3ulcb-2x4g-kf.cfg"
 
 FILES_${PN} = " \
     ${base_prefix}${XT_DIR_ABS_ROOTFS_DOM_CFG}/domd.cfg \

@@ -32,6 +32,13 @@ XT_QUIRK_BB_ADD_LAYER_append_h3ulcb-4x2g-kf = " \
     meta-rcar/meta-rcar-gen3-adas \
 "
 
+################################################################################
+# Renesas R-Car M3ULCB ES3.0 8GB Kingfisher
+################################################################################
+XT_QUIRK_BB_ADD_LAYER_append_m3ulcb-2x4g-kf = " \
+    meta-rcar/meta-rcar-gen3-adas \
+"
+
 configure_versions_kingfisher() {
     local local_conf="${S}/build/conf/local.conf"
 
@@ -55,6 +62,11 @@ configure_versions_kingfisher() {
 python do_configure_append_h3ulcb-4x2g-kf() {
     bb.build.exec_func("configure_versions_kingfisher", d)
 }
+
+python do_configure_append_m3ulcb-2x4g-kf() {
+    bb.build.exec_func("configure_versions_kingfisher", d)
+}
+
 
 XT_BB_IMAGE_TARGET = "core-image-minimal"
 
@@ -88,6 +100,10 @@ XT_QUIRK_PATCH_SRC_URI_rcar = "\
 "
 
 XT_QUIRK_PATCH_SRC_URI_append_h3ulcb-4x2g-kf = "\
+    file://0001-armtf-Add-missing-ADDITIONAL_ATFW_OPT-in-do_ipl_opt_.patch;patchdir=meta-rcar \
+"
+
+XT_QUIRK_PATCH_SRC_URI_append_m3ulcb-2x4g-kf = "\
     file://0001-armtf-Add-missing-ADDITIONAL_ATFW_OPT-in-do_ipl_opt_.patch;patchdir=meta-rcar \
 "
 

@@ -28,6 +28,7 @@ DOM0_ALLOWED_PCPUS_h3ulcb-4x2g-xt = "4-7"
 DOM0_ALLOWED_PCPUS_h3ulcb-4x2g-ab-xt = "4-7"
 DOM0_ALLOWED_PCPUS_h3ulcb-4x2g-kf-xt = "4-7"
 DOM0_ALLOWED_PCPUS_salvator-xs-m3-2x4g-xt = "2-5"
+DOM0_ALLOWED_PCPUS_m3ulcb-2x4g-kf-xt = "2-5"
 
 FILES_${PN} = " \
     ${base_prefix}${XT_DIR_ABS_ROOTFS_SCRIPTS}/start_guest.sh \
