@@ -22,3 +22,7 @@ do_install_append() {
 FILES_${PN}-xencommons += " \
     ${localstatedir}/lib/xen \
 "
+
+RDEPENDS_${PN}-xencommons += " \
+    util-linux-prlimit \
+"
