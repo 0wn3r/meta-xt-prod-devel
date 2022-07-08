@@ -1,0 +1,23 @@
+From 6b48ea22654dd6bd7324e3104f5dab216e87ca69 Mon Sep 17 00:00:00 2001
+From: Eduard Kachur <eduard.kachur@intellias.com>
+Date: Fri, 8 Jul 2022 18:34:36 +0300
+Subject: [PATCH] Enable BOOTSTAGE for RCAR3
+
+Signed-off-by: Eduard Kachur <eduard.kachur@intellias.com>
+---
+ configs/rcar3_ulcb_defconfig | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/configs/rcar3_ulcb_defconfig b/configs/rcar3_ulcb_defconfig
+index 710b2f4a4a..792ee1ae98 100644
+--- a/configs/rcar3_ulcb_defconfig
++++ b/configs/rcar3_ulcb_defconfig
+@@ -72,3 +72,5 @@ CONFIG_USB_EHCI_GENERIC=y
+ CONFIG_USB_STORAGE=y
+ CONFIG_OF_LIBFDT_OVERLAY=y
+ CONFIG_SMBIOS_MANUFACTURER=""
++CONFIG_BOOTSTAGE=y
++CONFIG_BOOTSTAGE_REPORT=y
+-- 
+2.34.1
+
