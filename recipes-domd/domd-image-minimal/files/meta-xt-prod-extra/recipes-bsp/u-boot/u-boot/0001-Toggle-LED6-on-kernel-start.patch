@@ -1,0 +1,29 @@
+From ab9df08997162d6a1888e0cb24e804d8868e41f6 Mon Sep 17 00:00:00 2001
+From: "daniil.krant" <daniil.krant@intellias.com>
+Date: Tue, 19 Jul 2022 14:38:08 +0200
+Subject: [PATCH] Toggle LED6 on kernel start
+
+---
+ arch/arm/lib/bootm.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/arch/arm/lib/bootm.c b/arch/arm/lib/bootm.c
+index 1206e306db..ead9fdb077 100644
+--- a/arch/arm/lib/bootm.c
++++ b/arch/arm/lib/bootm.c
+@@ -111,8 +111,10 @@ static void announce_and_cleanup(int fake)
+ #endif
+ 
+ 	board_quiesce_devices();
+-
+-	printf("\nStarting kernel ...%s\n\n", fake ?
++	
++	run_command("gpio toggle gpio@e605540013", 0);
++	
++	printf("\nStarting kernel with GPIO ...%s\n\n", fake ?
+ 		"(fake run for tracing)" : "");
+ 	/*
+ 	 * Call remove function of all devices with a removal flag set.
+-- 
+2.34.1
+
